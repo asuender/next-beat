@@ -1,6 +1,7 @@
 {
   "name": "next-beat",
   "version": "0.1.0",
+  "description": "A small web app showing the most listened tracks of a user, combining the Next.js framework with the heartbeat of your music!",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
