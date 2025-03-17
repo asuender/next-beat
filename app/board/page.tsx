@@ -19,7 +19,7 @@ export default async function Board() {
         </h1>
 
         {topTracks && (
-          <div className="columns-3">
+          <div className="lg:columns-3 md:columns-2 columns-1">
             {topTracks.items.map((artist: ArtistObject) => (
               <Artist key={artist.id} {...artist} />
             ))}

@@ -24,7 +24,8 @@ export default function Artist({
 
   return (
     <motion.div
-      className="relative break-inside-avoid mb-6"
+      className="relative break-inside-avoid mb-6 mx-auto"
+      style={{ maxWidth: image.width }}
       whileHover="hover"
       initial="initial"
     >
@@ -46,7 +47,7 @@ export default function Artist({
         {name}
       </motion.div>
       {popularity > 70 && (
-        <div className="absolute top-4 right-8 text-2xl text-gray-500">🔥</div>
+        <div className="absolute top-4 right-6 text-2xl text-gray-500">🔥</div>
       )}
     </motion.div>
   );
