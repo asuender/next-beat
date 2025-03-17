@@ -6,5 +6,6 @@ export type Artist = {
     width: number;
     height: number;
   }[];
+  popularity: number;
   uri: string;
 };

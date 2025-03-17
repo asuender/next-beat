@@ -5,7 +5,12 @@ import Image from 'next/image';
 import { motion } from 'motion/react';
 import Link from 'next/link';
 
-export default function Artist({ name, images, uri }: ArtistObject) {
+export default function Artist({
+  name,
+  images,
+  popularity,
+  uri,
+}: ArtistObject) {
   const image = images[1];
 
   const textVariants = {
@@ -19,7 +24,7 @@ export default function Artist({ name, images, uri }: ArtistObject) {
 
   return (
     <motion.div
-      className="relative mb-6 break-inside-avoid"
+      className="relative break-inside-avoid mb-6"
       whileHover="hover"
       initial="initial"
     >
@@ -40,6 +45,9 @@ export default function Artist({ name, images, uri }: ArtistObject) {
       >
         {name}
       </motion.div>
+      {popularity > 70 && (
+        <div className="absolute top-4 right-8 text-2xl text-gray-500">🔥</div>
+      )}
     </motion.div>
   );
 }
