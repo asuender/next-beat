@@ -19,7 +19,7 @@ export default function Artist({
   };
 
   const imageVariants = {
-    hover: { opacity: 0.5, transition: { duration: 0.3 } },
+    hover: { opacity: 0.3, transition: { duration: 0.3 } },
   };
 
   return (
