@@ -32,7 +32,28 @@ export default function RootLayout({
             Sign out
           </button>
         </header>
+
         {children}
+
+        <footer className="flex items-center justify-center text-gray-500 mt-16 mb-4">
+          <p>
+            Made by{' '}
+            <a
+              href="https://github.com/asuender"
+              className="text-blue-500 hover:text-blue-600 dark:text-blue-400"
+            >
+              asuender
+            </a>
+            . Created with{' '}
+            <a
+              href="https://nextjs.org"
+              className="text-blue-500 hover:text-blue-600 dark:text-blue-400"
+            >
+              Next.js
+            </a>
+            .
+          </p>
+        </footer>
       </body>
     </html>
   );
