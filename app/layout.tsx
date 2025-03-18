@@ -25,7 +25,7 @@ export default function RootLayout({
       <body className={`${rubik.className} antialiased`}>
         <header className="flex justify-between items-center px-5">
           <div className="flex gap-10">
-            <h1 className="text-xl font-bold my-4">🎹 Next Board</h1>
+            <Link href="/" className="text-xl font-bold my-4">🎹 Next Board</Link>
             <ul className="flex items-center gap-5">
               <li>
                 <MotionLink href="/board/tracks" content="Tracks" />

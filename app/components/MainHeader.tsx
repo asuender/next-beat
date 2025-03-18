@@ -3,11 +3,12 @@ import Image from 'next/image';
 type MainHeaderProps = {
   title: string;
   session: Session;
+  className?: string;
 };
 
-export default async function MainHeader({ title, session }: MainHeaderProps) {
+export default async function MainHeader({ title, session, className }: MainHeaderProps) {
   return (
-    <div className="flex justify-between items-center mt-16 mb-8 px-2">
+    <div className={`flex justify-between items-center mt-16 mb-8 ${className}`}>
       <h2 className="text-4xl font-bold">{title}</h2>
       <Image
         src={session.user?.image || ''}

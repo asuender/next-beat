@@ -17,6 +17,7 @@ export default async function Tracks() {
         <MainHeader
           title={`${session.user?.name}'s Top Tracks`}
           session={session}
+          className="px-4"
         />
 
         <div className="max-w-5xl mx-auto">
