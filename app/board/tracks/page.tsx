@@ -3,6 +3,7 @@ import { getUserTop } from '@/app/lib/actions';
 import { TrackObject } from '@/app/lib/definitions';
 import Track from '@/app/components/Track';
 import MainHeader from '@/app/components/MainHeader';
+
 export default async function Tracks() {
   const session = await auth();
   if (!session) {

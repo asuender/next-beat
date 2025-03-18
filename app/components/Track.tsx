@@ -4,7 +4,7 @@ import { TrackObject } from '@/app/lib/definitions';
 import { motion } from 'motion/react';
 import Image from 'next/image';
 import Link from 'next/link';
-import prettyMilliseconds from 'pretty-ms';
+import ProgressBar from './ProgressBar';
 
 export default function Track({
   name,
@@ -15,6 +15,11 @@ export default function Track({
   popularity,
 }: TrackObject) {
   const image = album.images[1] || null;
+
+  const timeFormatOptions = {
+    colonNotation: true,
+    secondsDecimalDigits: 0,
+  };
 
   return (
     <motion.div
@@ -36,23 +41,7 @@ export default function Track({
           )}
         </div>
 
-        <div className="w-full flex items-center gap-2 px-1">
-          <span className="text-gray-400 text-sm">
-            {prettyMilliseconds(0.4 * duration_ms, {
-              colonNotation: true,
-              secondsDecimalDigits: 0,
-            })}
-          </span>
-          <div className="bg-neutral-700 flex-grow rounded-3xl">
-            <div className="w-[40%] h-[8px] bg-neutral-500 rounded-l-3xl"></div>
-          </div>
-          <span className="text-gray-400 text-sm">
-            {prettyMilliseconds(duration_ms, {
-              colonNotation: true,
-              secondsDecimalDigits: 0,
-            })}
-          </span>
-        </div>
+        <ProgressBar duration_ms={duration_ms} className="px-1" />
 
         <div className="flex flex-col items-center text-center">
           <span className="text-white text-2xl font-bold">{name}</span>
