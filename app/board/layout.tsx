@@ -18,6 +18,9 @@ export default function BoardLayout({ children }: { children: React.ReactNode })
               <li>
                 <MotionLink href="/board/artists" content="Artists" />
               </li>
+              <li>
+                <MotionLink href="/board/podcasts" content="Podcasts" />
+              </li>
             </ul>
           </div>
 

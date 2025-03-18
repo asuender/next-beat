@@ -30,3 +30,25 @@ export type TrackObject = {
   duration_ms: number;
   popularity: number;
 }
+
+export type ShowObject = {
+  id: string;
+  name: string;
+  images: Image[];
+}
+
+export type SavedEpisodeItem = {
+  added_at: string;
+  episode: SavedEpisodeObject;
+}
+
+export type SavedEpisodeObject = {
+  id: string;
+  name: string;
+  show: ShowObject;
+  duration_ms: number;
+  resume_point: {
+    fully_played: boolean;
+    resume_position_ms: number;
+  }
+}

@@ -13,3 +13,13 @@ export async function getUserTop(session: Session, type: 'tracks' | 'artists') {
   const data = await response.json();
   return data;
 }
+
+export async function getUserPodcasts(session: Session) {
+  const response = await fetch(`${BASE_URL}/me/episodes`, {
+    headers: {
+      Authorization: `Bearer ${session?.access_token}`,
+    },
+  });
+  const data = await response.json();
+  return data;
+}

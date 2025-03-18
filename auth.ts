@@ -8,7 +8,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
     authorization: {
       url: "https://accounts.spotify.com/authorize",
       params: {
-        scope: 'user-read-email user-top-read',
+        scope: 'user-read-email user-top-read user-library-read user-read-playback-position',
       },
     },
   })],
