@@ -40,7 +40,7 @@ export const authConfig: NextAuthConfig = {
               body: new URLSearchParams({
                 grant_type: 'refresh_token',
                 refresh_token: token.refresh_token,
-                client_id: process.env.SPOTIFY_CLIENT_ID!,
+                client_id: process.env.AUTH_SPOTIFY_ID!,
               }),
             }
           );
