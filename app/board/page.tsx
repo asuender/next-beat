@@ -1,4 +1,4 @@
-import { auth, signOut } from '@/auth';
+import { auth } from '@/auth';
 import { getUserTop } from '@/app/lib/actions';
 import { Artist as ArtistObject } from '../lib/definitions';
 import Artist from '@/app/components/Artist';
