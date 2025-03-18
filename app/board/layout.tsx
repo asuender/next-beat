@@ -5,7 +5,7 @@ import SignOutButton from '@/app/components/SignOutButton';
 
 export default function BoardLayout({ children }: { children: React.ReactNode }) {
   return (
-    <div>
+    <>
       <header className="flex justify-between items-center px-5">
           <div className="flex gap-10">
             <Link href="/" className="text-xl font-bold my-4">
@@ -48,6 +48,6 @@ export default function BoardLayout({ children }: { children: React.ReactNode })
             .
           </p>
         </footer>
-    </div>
+    </>
   )
 }
