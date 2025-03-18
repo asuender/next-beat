@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { Rubik } from 'next/font/google';
 import './globals.css';
 import { signOut } from 'next-auth/react';
+import Link from 'next/link';
+import MotionLink from './components/MotionLink';
 
 const rubik = Rubik({
   subsets: ['latin'],
@@ -22,7 +24,17 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${rubik.className} antialiased`}>
         <header className="flex justify-between items-center px-5">
-          <h1 className="text-xl font-bold my-4">🎹 Next Board</h1>
+          <div className="flex gap-10">
+            <h1 className="text-xl font-bold my-4">🎹 Next Board</h1>
+            <ul className="flex items-center gap-5">
+              <li>
+                <MotionLink href="/board/tracks" content="Tracks" />
+              </li>
+              <li>
+                <MotionLink href="/board/artists" content="Artists" />
+              </li>
+            </ul>
+          </div>
           <button
             onClick={async () => {
               'use server';
