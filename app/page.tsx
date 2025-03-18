@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import MotionLink from '@/app/components/MotionLink';
 
 export default function Home() {
