@@ -37,7 +37,7 @@ export default function Track({
             className="rounded-xl"
           />
           {popularity > 60 && (
-            <div className="absolute top-4 right-5 text-2xl text-gray-500">🔥</div>
+            <div className="absolute top-3 right-3.5 rounded-full px-2 py-1 text-2xl bg-neutral-800">🔥</div>
           )}
         </div>
 
