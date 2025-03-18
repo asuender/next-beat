@@ -1,6 +1,6 @@
 import { auth } from '@/auth';
 import { getUserTop } from '@/app/lib/actions';
-import { Artist as ArtistObject } from '../lib/definitions';
+import { Artist as ArtistObject } from '../../lib/definitions';
 import Artist from '@/app/components/Artist';
 import MainHeader from '@/app/components/MainHeader';
 
