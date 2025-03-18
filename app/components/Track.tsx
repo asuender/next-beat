@@ -12,6 +12,7 @@ export default function Track({
   album,
   uri,
   duration_ms,
+  popularity,
 }: TrackObject) {
   const image = album.images[1] || null;
 
@@ -22,23 +23,34 @@ export default function Track({
       whileHover={{ opacity: 0.3, transition: { duration: 0.3 } }}
     >
       <Link href={uri} className="flex flex-col items-center gap-4">
-        <Image
-          src={image.url}
-          alt={name}
-          width={image.width}
-          height={image.height}
-          className="rounded-xl"
-        />
+        <div className="relative">
+          <Image
+            src={image.url}
+            alt={name}
+            width={image.width}
+            height={image.height}
+            className="rounded-xl"
+          />
+          {popularity > 60 && (
+            <div className="absolute top-4 right-5 text-2xl text-gray-500">🔥</div>
+          )}
+        </div>
 
         <div className="w-full flex items-center gap-2 px-1">
           <span className="text-gray-400 text-sm">
-            {prettyMilliseconds(0.4 * duration_ms, { colonNotation: true, secondsDecimalDigits: 0 })}
+            {prettyMilliseconds(0.4 * duration_ms, {
+              colonNotation: true,
+              secondsDecimalDigits: 0,
+            })}
           </span>
           <div className="bg-neutral-700 flex-grow rounded-3xl">
             <div className="w-[40%] h-[8px] bg-neutral-500 rounded-l-3xl"></div>
           </div>
           <span className="text-gray-400 text-sm">
-            {prettyMilliseconds(duration_ms, { colonNotation: true, secondsDecimalDigits: 0 })}
+            {prettyMilliseconds(duration_ms, {
+              colonNotation: true,
+              secondsDecimalDigits: 0,
+            })}
           </span>
         </div>
 

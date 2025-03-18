@@ -28,4 +28,5 @@ export type TrackObject = {
   album: AlbumObject;
   uri: string;
   duration_ms: number;
+  popularity: number;
 }
