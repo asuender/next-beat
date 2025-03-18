@@ -1,6 +1,5 @@
 'use server';
 
-import { auth } from '@/auth';
 import { Session } from 'next-auth';
 
 const BASE_URL = 'https://api.spotify.com/v1';

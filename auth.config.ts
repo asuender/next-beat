@@ -5,6 +5,9 @@ export const authConfig: NextAuthConfig = {
     async authorized({ auth, request: { nextUrl } }) {
       const isLoggedIn = !!auth?.user;
       const isOnDashboard = nextUrl.pathname.startsWith('/board');
+
+      console.log('isLoggedIn', isLoggedIn);
+
       if (isOnDashboard) {
         if (isLoggedIn) return true;
         return false;
@@ -13,7 +16,7 @@ export const authConfig: NextAuthConfig = {
       }
       return true;
     },
-    async jwt({ token, user, account }) {
+    async jwt({ token, account }) {
       if (account) {
         // First-time login, save the `access_token`, its expiry and the `refresh_token`
         return {
@@ -66,7 +69,7 @@ export const authConfig: NextAuthConfig = {
         }
       }
     },
-    session({ session, token, user }) {
+    session({ session, token }) {
       return {
         ...session,
         access_token: token.access_token,

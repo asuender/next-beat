@@ -1,6 +1,5 @@
 import { auth } from '@/auth';
 import MainHeader from '../components/MainHeader';
-import Link from 'next/link';
 import MotionLink from '../components/MotionLink';
 
 export default async function Home() {

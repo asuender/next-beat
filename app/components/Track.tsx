@@ -7,7 +7,6 @@ import Link from 'next/link';
 import prettyMilliseconds from 'pretty-ms';
 
 export default function Track({
-  id,
   name,
   artists,
   album,
