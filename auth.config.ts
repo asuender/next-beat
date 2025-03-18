@@ -67,7 +67,11 @@ export const authConfig: NextAuthConfig = {
       }
     },
     session({ session, token, user }) {
-      return { ...session, access_token: token.access_token };
+      return {
+        ...session,
+        access_token: token.access_token,
+        error: token.error as string | undefined,
+      };
     },
   },
   providers: [],
