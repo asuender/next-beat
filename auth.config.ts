@@ -6,8 +6,6 @@ export const authConfig: NextAuthConfig = {
       const isLoggedIn = !!auth?.user;
       const isOnDashboard = nextUrl.pathname.startsWith('/board');
 
-      console.log('isLoggedIn', isLoggedIn);
-
       if (isOnDashboard) {
         if (isLoggedIn) return true;
         return false;
