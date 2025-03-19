@@ -15,7 +15,11 @@ export default async function Board() {
   return (
     <main className="w-full">
       <div className="max-w-5xl mx-auto">
-        <MainHeader title={`${session.user?.name}'s Top Artists`} session={session} className="px-2" />
+        <MainHeader
+          title={`${session.user?.name}'s Top Artists`}
+          session={session}
+          className="px-2"
+        />
 
         {topTracks && (
           <div className="lg:columns-3 md:columns-2 columns-1">

@@ -2,7 +2,13 @@
 
 import { motion } from 'motion/react';
 
-export default function MotionButton({ onClick, children }: { onClick: () => void, children: React.ReactNode }) {
+export default function MotionButton({
+  onClick,
+  children,
+}: {
+  onClick: () => void;
+  children: React.ReactNode;
+}) {
   return (
     <motion.button
       onClick={() => onClick()}
@@ -11,5 +17,5 @@ export default function MotionButton({ onClick, children }: { onClick: () => voi
     >
       {children}
     </motion.button>
-  )
+  );
 }

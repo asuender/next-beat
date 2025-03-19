@@ -2,8 +2,8 @@ type Image = {
   url: string;
   width: number;
   height: number;
-}
- 
+};
+
 type SimplifiedArtistObject = {
   id: string;
   name: string;
@@ -19,7 +19,7 @@ export type AlbumObject = {
   id: string;
   name: string;
   images: Image[];
-}
+};
 
 export type TrackObject = {
   id: string;
@@ -29,18 +29,18 @@ export type TrackObject = {
   uri: string;
   duration_ms: number;
   popularity: number;
-}
+};
 
 export type ShowObject = {
   id: string;
   name: string;
   images: Image[];
-}
+};
 
 export type SavedEpisodeItem = {
   added_at: string;
   episode: SavedEpisodeObject;
-}
+};
 
 export type SavedEpisodeObject = {
   id: string;
@@ -50,5 +50,5 @@ export type SavedEpisodeObject = {
   resume_point: {
     fully_played: boolean;
     resume_position_ms: number;
-  }
-}
+  };
+};

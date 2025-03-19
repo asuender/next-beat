@@ -6,9 +6,15 @@ type MainHeaderProps = {
   className?: string;
 };
 
-export default async function MainHeader({ title, session, className }: MainHeaderProps) {
+export default async function MainHeader({
+  title,
+  session,
+  className,
+}: MainHeaderProps) {
   return (
-    <div className={`flex justify-between items-center mt-16 mb-8 ${className}`}>
+    <div
+      className={`flex justify-between items-center mt-16 mb-8 ${className}`}
+    >
       <h2 className="text-4xl font-bold">{title}</h2>
       <Image
         src={session.user?.image || ''}

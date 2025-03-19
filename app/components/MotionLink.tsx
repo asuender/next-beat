@@ -1,8 +1,16 @@
 'use client';
 
-import { motion } from "motion/react";
+import { motion } from 'motion/react';
 
-export default function MotionLink({ href, content, className }: { href: string, content: string, className?: string }) {
+export default function MotionLink({
+  href,
+  content,
+  className,
+}: {
+  href: string;
+  content: string;
+  className?: string;
+}) {
   return (
     <motion.a
       href={href}
@@ -11,5 +19,5 @@ export default function MotionLink({ href, content, className }: { href: string,
     >
       {content}
     </motion.a>
-  )
+  );
 }
