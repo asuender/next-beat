@@ -16,11 +16,6 @@ export default function Track({
 }: TrackObject) {
   const image = album.images[1] || null;
 
-  const timeFormatOptions = {
-    colonNotation: true,
-    secondsDecimalDigits: 0,
-  };
-
   return (
     <motion.div
       className="break-inside-avoid bg-neutral-800 rounded-2xl p-6 mb-6 mx-auto"

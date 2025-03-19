@@ -3,8 +3,7 @@
 import { useState } from 'react';
 import { SavedEpisodeItem } from '../lib/definitions';
 import Podcast from '../components/Podcast';
-import { motion, Reorder } from 'motion/react';
-import { log } from 'console';
+import { Reorder } from 'motion/react';
 
 export default function PodcastsPage({
   savedPodcasts,
