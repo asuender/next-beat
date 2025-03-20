@@ -16,21 +16,29 @@ export default async function Home() {
           session={session}
         />
 
-        <MotionLink
-          href="/board/tracks"
-          className="block text-xl font-bold mb-2"
-          content="Show your top tracks"
-        />
-        <MotionLink
-          href="/board/artists"
-          className="block text-xl font-bold mb-2"
-          content="Show your top artists"
-        />
-        <MotionLink
-          href="/board/podcasts"
-          className="block text-xl font-bold"
-          content="Show your saved podcasts"
-        />
+        <ul>
+          <li>
+            <MotionLink
+              href="/board/tracks"
+              className="text-xl font-bold mb-2"
+              content="Show your top tracks"
+            />
+          </li>
+          <li>
+            <MotionLink
+              href="/board/artists"
+              className="text-xl font-bold mb-2"
+              content="Show your top artists"
+            />
+          </li>
+          <li>
+            <MotionLink
+              href="/board/podcasts"
+              className="text-xl font-bold mb-2"
+              content="Show your saved podcasts"
+            />
+          </li>
+        </ul>
       </div>
     </main>
   );
